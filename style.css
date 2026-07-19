@@ -1,0 +1,129 @@
+/* --- СБРОС И КИБЕР-ЛАЙМ ПЕРЕМЕННЫЕ --- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+:root {
+    --bg: #090b0e; --card: rgba(18,22,28,0.7);
+    --lime: #ccff00; --text: #fff; --gray: #8a94a6;
+}
+body { background: var(--bg); color: var(--text); font-family: system-ui, sans-serif; overflow-x: hidden; }
+
+/* --- АТМОСФЕРНЫЕ НЕОНОВЫЕ СВЕЧЕНИЯ --- */
+.neon-glow { position: fixed; width: 50vw; height: 50vw; border-radius: 50%; pointer-events: none; z-index: 0; filter: blur(150px); opacity: 0.12; }
+.glow-lime-1 { top: -15%; right: -10%; background: radial-gradient(circle, var(--lime) 0%, transparent 70%); }
+.glow-lime-2 { bottom: -15%; left: -10%; background: radial-gradient(circle, #00ffcc 0%, transparent 70%); }
+
+/* --- ФУТУРИСТИЧНАЯ ШАПКА --- */
+.header {
+    position: fixed; top: 0; left: 0; width: 100%; padding: 20px;
+    display: flex; justify-content: space-between; align-items: center;
+    z-index: 1000; background: rgba(9,11,14,0.6); backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+.logo { font-size: 22px; font-weight: 900; letter-spacing: -0.5px; }
+.logo span { color: var(--lime); }
+.nav { display: flex; align-items: center; gap: 20px; }
+.nav a { color: var(--text); text-decoration: none; font-size: 14px; font-weight: 500; }
+.btn-nav { border: 1px solid var(--lime); padding: 6px 14px; border-radius: 20px; color: var(--lime) !important; }
+
+/* --- ГЛАВНЫЙ ЭКРАН (HERO) --- */
+.hero {
+    min-height: 100vh; padding: 120px 20px 40px; display: flex;
+    align-items: center; justify-content: space-between; gap: 40px;
+    max-width: 1200px; margin: 0 auto; position: relative; z-index: 1;
+}
+.hero-content { flex: 1; max-width: 650px; }
+.badge {
+    display: inline-flex; background: rgba(204,255,0,0.08); border: 1px solid rgba(204,255,0,0.2);
+    padding: 6px 12px; border-radius: 30px; font-size: 11px; font-weight: 600;
+    margin-bottom: 20px; color: var(--lime); text-transform: uppercase;
+}
+.hero h1 { font-size: 46px; font-weight: 900; line-height: 1.15; margin-bottom: 20px; letter-spacing: -1px; }
+.text-gradient { background: linear-gradient(135deg, #fff, var(--lime)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-lead { color: var(--gray); margin-bottom: 35px; font-size: 16px; }
+.hero-actions { display: flex; gap: 15px; }
+
+/* КНОПКИ */
+.btn {
+    display: inline-flex; align-items: center; gap: 8px; padding: 14px 26px;
+    border-radius: 30px; font-size: 14px; font-weight: 700;
+    text-decoration: none; cursor: pointer; transition: all 0.3s ease;
+}
+.btn-primary { background: var(--lime); color: #000; border: none; }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(204,255,0,0.3); }
+.btn-secondary { background: rgba(255,255,255,0.02); color: var(--text); border: 1px solid rgba(255,255,255,0.08); }
+.btn-secondary:hover { border-color: var(--lime); }
+
+.hero-image-container { flex: 1; position: relative; display: flex; justify-content: center; }
+.hero-image { width: 340px; height: 440px; background-size: cover; background-position: center; background-color: #12161c; border-radius: 24px; border: 1px solid rgba(255,255,255,0.05); }
+.floating-card {
+    position: absolute; bottom: 20px; left: -10px; background: rgba(9,11,14,0.8);
+    backdrop-filter: blur(12px); border: 1px solid rgba(204,255,0,0.2);
+    padding: 14px 20px; border-radius: 16px; display: flex; align-items: center; gap: 12px;
+}
+.text-lime { color: var(--lime); }
+
+/* --- СЕКЦИЯ УСЛУГ --- */
+.services-section, .catalog-section, .contact-section { padding: 80px 20px; max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
+.section-header { text-align: center; margin-bottom: 50px; }
+.section-header h2 { font-size: 34px; font-weight: 800; margin-bottom: 10px; }
+.section-header p { color: var(--gray); font-size: 15px; }
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+.service-card { background: var(--card); border: 1px solid rgba(255,255,255,0.03); padding: 30px; border-radius: 20px; backdrop-filter: blur(10px); }
+.service-card i { font-size: 28px; color: var(--lime); margin-bottom: 20px; display: block; }
+.service-card h3 { font-size: 18px; margin-bottom: 10px; }
+.service-card p { color: var(--gray); font-size: 13px; line-height: 1.6; }
+
+/* --- КАТАЛОГ КЕЙСОВ --- */
+.catalog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 30px; }
+.apartment-card { background: var(--card); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.03); border-radius: 20px; overflow: hidden; transition: all 0.3s; }
+.apartment-card:hover { transform: translateY(-5px); border-color: rgba(204,255,0,0.3); }
+.card-image { height: 210px; background-size: cover; background-position: center; background-color: #12161c; position: relative; }
+.card-tag { position: absolute; top: 12px; left: 12px; background: #090b0e; border: 1px solid var(--lime); color: var(--lime); padding: 4px 10px; border-radius: 10px; font-size: 10px; font-weight: 600; text-transform: uppercase; }
+.card-info { padding: 20px; }
+.card-price { color: var(--lime); font-size: 14px; font-weight: 700; margin: 10px 0; text-transform: uppercase; letter-spacing: 1px; }
+.card-desc { color: var(--gray); font-size: 13px; margin-bottom: 15px; min-height: 40px; }
+.btn-view { width: 100%; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); color: #fff; padding: 12px; border-radius: 12px; font-weight: 600; cursor: pointer; transition: all 0.3s; }
+.btn-view:hover { background: var(--lime); color: #000; border-color: var(--lime); }
+
+/* --- ФОРМА И МОДАЛКА --- */
+.contact-container { display: flex; gap: 50px; align-items: center; }
+.contact-info, .contact-form-box { flex: 1; }
+.contact-form-box { background: var(--card); padding: 40px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.03); }
+.contact-info h2 { font-size: 36px; font-weight: 800; margin-bottom: 15px; }
+.contact-info p { color: var(--gray); }
+.contact-methods { margin-top: 25px; display: flex; flex-direction: column; gap: 12px; }
+.method { font-size: 15px; font-weight: 600; display: flex; align-items: center; gap: 10px; }
+input { width: 100%; background: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.08); padding: 15px; border-radius: 12px; color: #fff; margin-bottom: 15px; outline: none; transition: border 0.3s; }
+input:focus { border-color: var(--lime); }
+.btn-full { width: 100%; justify-content: center; }
+.footer { padding: 30px; text-align: center; border-top: 1px solid rgba(255,255,255,0.03); color: var(--gray); font-size: 12px; }
+
+.modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(9,11,14,0.85); backdrop-filter: blur(8px); display: none; justify-content: center; align-items: center; z-index: 2000; }
+.modal-window { background: #0e1217; border: 1px solid rgba(204,255,0,0.3); padding: 40px; border-radius: 24px; width: 100%; max-width: 420px; position: relative; }
+.modal-close { position: absolute; top: 15px; right: 15px; background: none; border: none; color: #fff; font-size: 24px; cursor: pointer; }
+
+/* --- ИИ МАРКЕТОЛОГ ВИТДЖЕТ --- */
+.ai-assistant-widget { position: fixed; bottom: 20px; right: 20px; z-index: 5000; }
+.ai-button { background: var(--lime); color: #000; padding: 12px 20px; border-radius: 30px; display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 14px; cursor: pointer; box-shadow: 0 10px 25px rgba(204,255,0,0.2); }
+.ai-chat-window { position: absolute; bottom: 60px; right: 0; width: 310px; height: 420px; background: #0e1217; border: 1px solid rgba(204,255,0,0.3); border-radius: 16px; display: none; flex-direction: column; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
+.ai-chat-header { background: rgba(204,255,0,0.05); padding: 12px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.03); }
+.ai-chat-header button { background: none; border: none; color: #fff; font-size: 18px; cursor: pointer; }
+.ai-chat-body { flex: 1; padding: 12px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; }
+.message { padding: 9px 13px; border-radius: 12px; font-size: 13px; max-width: 85%; line-height: 1.4; }
+.message.bot { background: rgba(255,255,255,0.04); align-self: flex-start; }
+.message.user { background: var(--lime); color: #000; align-self: flex-end; font-weight: 500; }
+.ai-chat-footer { padding: 10px; display: flex; gap: 8px; border-top: 1px solid rgba(255,255,255,0.03); }
+.ai-chat-footer input { margin-bottom: 0; padding: 10px; border-radius: 8px; background: rgba(255,255,255,0.01); }
+.ai-chat-footer button { background: var(--lime); border: none; padding: 0 14px; border-radius: 8px; cursor: pointer; color: #000; }
+
+/* --- МОБИЛЬНЫЙ АДАПТИВ --- */
+@media (max-width: 868px) {
+    .hero { flex-direction: column; text-align: center; padding-top: 100px; gap: 30px; }
+    .hero-actions { justify-content: center; }
+    .hero-image { width: 100%; max-width: 290px; height: 360px; }
+    .floating-card { left: 50%; transform: translateX(-50%); bottom: -10px; }
+    .contact-container { flex-direction: column; gap: 40px; }
+    .nav a:not(.btn-nav) { display: none; } /* Скрываем текст в меню */
+    .services-section, .catalog-section, .contact-section { padding: 50px 15px; }
+    .contact-form-box { padding: 25px; }
+}

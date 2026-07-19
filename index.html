@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRISM.MEDIA | Агентство Прогрессивной Рекламы Москва</title>
+    <!-- Подключаем современный шрифт и иконки -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- КИБЕР-ЛАЙМОВЫЕ АТМОСФЕРНЫЕ СВЕЧЕНИЯ -->
+    <div class="neon-glow glow-lime-1"></div>
+    <div class="neon-glow glow-lime-2"></div>
+
+    <!-- ФУТУРИСТИЧНАЯ ШАПКА (NAVIGATION) -->
+    <header class="header">
+        <div class="logo">PRISM<span>.MEDIA</span></div>
+        <nav class="nav">
+            <a href="#services">Услуги</a>
+            <a href="#catalog">Кейсы</a>
+            <a href="#contact" class="btn-nav">Запустить кампейн</a>
+        </nav>
+    </header>
+
+    <!-- ГЛАВНЫЙ ЭКРАН (HERO SECTION) -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="badge"><i class="fa-solid fa-fire-flame-curved"></i> Шумим на улицах Москвы с 2018 года</div>
+            <h1>Вламываемся в<br><span class="text-gradient">визуальный</span> код столицы.</h1>
+            <p class="hero-lead">Проектируем дерзкие рекламные кампании полного цикла: от умного стрит-арта и неоновых постеров до тактильного крафтового промо на Патриарших.</p>
+            <div class="hero-actions">
+                <a href="#contact" class="btn btn-primary">Зажечь бренд <i class="fa-solid fa-bolt"></i></a>
+                <a href="#catalog" class="btn btn-secondary">Смотреть кейсы</a>
+            </div>
+        </div>
+        <div class="hero-image-container">
+            <!-- Главное стильное фото вашего креативного офиса или команды (пока заглушка) -->
+            <div class="hero-image" style="background-image: url('agency-hero.jpg');"></div>
+            <div class="floating-card">
+                <i class="fa-solid fa-eye text-lime"></i>
+                <div>
+                    <h4>15 млн+</h4>
+                    <p>Суммарный охват в месяц</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ ЛОКАЛЬНЫХ СТАТИЧНЫХ УСЛУГ -->
+    <section id="services" class="services-section">
+        <div class="section-header">
+            <h2>Что мы качаем</h2>
+            <p>Инструменты, которые заставят Москву говорить о вашем продукте</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fa-solid fa-paper-clip"></i>
+                <h3>Крафт-Промо</h3>
+                <p>Никакого дешевого глянца. Только тактильные листовки на плотном картоне с арома-маркетингом в топовых локациях.</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-map-pin"></i>
+                <h3>Стрит-Постеры</h3>
+                <p>Масштабные неоновые афиши и постеры на легальных арт-площадках, мимо которых невозможно пройти.</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <h3>Партизанский PR</h3>
+                <p>Инсталляции, 3D-проекции на зданиях и вирусные инфоповоды, взрывающие соцсети без миллионных бюджетов.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- КАТАЛОГ РЕКЛАМНЫХ КЕЙСОВ (ВЫГРУЗКА ИЗ ТАБЛИЦЫ) -->
+    <section id="catalog" class="catalog-section">
+        <div class="section-header">
+            <h2>Наши медиа-кампейны</h2>
+            <p>Реализованные кейсы, которые уже принесли миллионы нашим клиентам</p>
+        </div>
+        
+        <!-- Сюда JavaScript автоматически вставит кейсы из Google Таблицы -->
+        <div class="catalog-grid" id="catalogGrid">
+            <p style="color: var(--gray); text-align: center; grid-column: 1/-1;">Синхронизация с креативной базой данных...</p>
+        </div>
+    </section>
+
+    <!-- ФОРМА ЗАЯВКИ (CONTACT SECTION) -->
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Готовы захватить внимание аудитории?</h2>
+                <p>Оставьте ваши контакты. Наш креативный директор свяжется с вами в течение 10 минут, и уже завтра мы вышлем первые 3 взрывные концепции под ваш бюджет.</p>
+                <div class="contact-methods">
+                    <div class="method"><i class="fa-solid fa-phone text-lime"></i> +7 (495) 111-22-33</div>
+                    <div class="method"><i class="fa-solid fa-envelope text-lime"></i> hello@prism.media</div>
+                </div>
+            </div>
+            <div class="contact-form-box">
+                <form id="prismForm" onsubmit="handleFormSubmit(event)">
+                    <input type="text" name="brandName" placeholder="Название вашего бренда / компании" required>
+                    <input type="tel" name="clientPhone" placeholder="Ваш номер телефона" required>
+                    <input type="text" name="clientGoal" placeholder="Что продвигаем? (услуга, продукт, ивент)">
+                    <button type="submit" class="btn btn-primary btn-full">Ударить по рынку <i class="fa-solid fa-rocket"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПОДВАЛ -->
+    <footer class="footer">
+        <p>&copy; 2026 PRISM.MEDIA | Креативная экосистема Москвы. Все права защищены.</p>
+    </footer>
+
+    <!-- МОДАЛЬНОЕ ОКНО ДЛЯ ДЕТАЛЕЙ КЕЙСА -->
+    <div class="modal-overlay" id="realtyModal">
+        <div class="modal-window">
+            <button class="modal-close" id="closeModalBtn">&times;</button>
+            <h3>Получить медиа-план по кейсу</h3>
+            <p id="modalObjectName" class="text-lime" style="font-weight: 600; margin-bottom: 20px;"></p>
+            <form onsubmit="handleModalSubmit(event)">
+                <input type="text" placeholder="Ваше имя" required>
+                <input type="tel" placeholder="Телефон / Telegram" required>
+                <button type="submit" class="btn btn-primary" style="width:100%">Хочу такой же кампейн</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ВИДЖЕТ ИИ-МАРКЕТОЛОГА (ФЛОАТИНГ) -->
+    <div class="ai-assistant-widget" id="aiWidget">
+        <div class="ai-button" id="aiButton">
+            <i class="fa-solid fa-bolt-lightning"></i>
+            <span>ИИ Маркетолог</span>
+        </div>
+        <div class="ai-chat-window" id="aiChatWindow">
+            <div class="ai-chat-header">
+                <h4><i class="fa-solid fa-wand-magic-sparkles"></i> PRISM AI-Генератор</h4>
+                <button id="closeAiChat">&times;</button>
+            </div>
+            <div class="ai-chat-body">
+                <div class="message bot">Йоу! Я нейро-маркетолог PRISM. Введите ваш бюджет или сферу, и я сгенерирую вирусную идею для рекламы прямо сейчас!</div>
+            </div>
+            <div class="ai-chat-footer">
+                <input type="text" id="aiInput" placeholder="Напишите вашу сферу (напр. кофейня)...">
+                <button id="sendAiMessage"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
